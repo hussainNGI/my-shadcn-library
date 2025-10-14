@@ -5,7 +5,8 @@ import Label from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { IconGitBranch } from "@tabler/icons-react"
+import { Home, Settings } from "lucide-react"
+import { DatePicker } from "@/components/ui/date-picker"
 
 export default function ComponentsShowcase() {
   return (
@@ -22,7 +23,7 @@ export default function ComponentsShowcase() {
           <Button variant="ghost">Ghost</Button>
           <Button variant="link">Link</Button>
           <Button>
-            <IconGitBranch /> With Icon
+            <Settings /> With Icon
           </Button>
         </div>
       </section>
@@ -35,6 +36,16 @@ export default function ComponentsShowcase() {
           <Input id="email" type="email" placeholder="name@example.com" />
         </div>
       </section>
+
+       {/* Calendar */}
+      <section>
+        <h2 className="text-lg font-medium mb-2">Calendar</h2>
+        <div className="space-y-2">
+          <Label htmlFor="email">Date of Birth</Label>
+          <DatePicker label="Start Date" disabled={(date) => date > new Date() || date < new Date("1900-01-01")} />
+        </div>
+      </section>
+
 
       {/* Select */}
       <section>
