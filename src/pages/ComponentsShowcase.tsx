@@ -5,6 +5,7 @@ import Label from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { IconGitBranch } from "@tabler/icons-react"
 
 export default function ComponentsShowcase() {
   return (
@@ -20,6 +21,9 @@ export default function ComponentsShowcase() {
           <Button variant="secondary">Secondary</Button>
           <Button variant="ghost">Ghost</Button>
           <Button variant="link">Link</Button>
+          <Button>
+            <IconGitBranch /> With Icon
+          </Button>
         </div>
       </section>
 
