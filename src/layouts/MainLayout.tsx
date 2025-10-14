@@ -9,7 +9,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
 
       {/* Content Area */}
       <main
-        className="flex-1 overflow-y-auto p-6 bg-[hsl(var(--content-bg))] text-foreground transition-colors duration-300"
+        className="flex-1 overflow-y-auto p-6 bg-[hsl(var(--content-bg))] text-foreground transition-colors duration-300 rounded-lg"
       >
         {children}
       </main>

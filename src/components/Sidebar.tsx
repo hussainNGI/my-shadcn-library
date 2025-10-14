@@ -15,13 +15,13 @@ export default function Sidebar() {
   return (
     <aside
       className={cn(
-        "relative h-screen bg-background border-r transition-all duration-300 flex flex-col",
+        "relative h-screen transition-all duration-300 flex flex-col",
         collapsed ? "w-16" : "w-56"
       )}
     >
       {/* Header */}
       <div className="flex items-center justify-between p-4">
-        {!collapsed && <h1 className="text-lg font-bold">Orko</h1>}
+        {!collapsed && <h1 className="text-lg font-bold">Arro</h1>}
         <button
           onClick={() => setCollapsed(!collapsed)}
           className="p-2 rounded-md hover:bg-muted transition"
