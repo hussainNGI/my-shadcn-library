@@ -14,19 +14,29 @@ export default function ComponentsShowcase() {
       <h1 className="text-2xl font-semibold mb-4">Components Showcase</h1>
 
       {/* Buttons */}
-      <section>
-        <h2 className="text-lg font-medium mb-2">Buttons</h2>
-        <div className="flex gap-3 flex-wrap">
-          <Button>Default</Button>
-          <Button variant="outline">Outline</Button>
-          <Button variant="secondary">Secondary</Button>
-          <Button variant="ghost">Ghost</Button>
-          <Button variant="link">Link</Button>
-          <Button>
-            <Settings /> With Icon
-          </Button>
+      <section className="flex gap-6">
+        <div className="flex flex-col">
+            <h2 className="text-lg font-medium mb-2">Buttons</h2>
+            <div className="flex gap-3 flex-wrap">
+            <Button>Default</Button>
+            <Button variant="outline">Outline</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="ghost">Ghost</Button>
+            <Button variant="link">Link</Button>
+            <Button>
+                <Settings /> With Icon
+            </Button>
+            </div>
+        </div>
+        <div className="flex flex-col">
+            <h2 className="text-lg font-medium mb-2">Different Size Buttons</h2>
+            <div className="flex gap-3 flex-wrap">
+            <Button size="lg">Large Button</Button>
+            <Button size="md">Medium Button</Button>
+            </div>
         </div>
       </section>
+      
 
       {/* Input */}
       <section>
