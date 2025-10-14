@@ -52,10 +52,10 @@ export default function Sidebar() {
       </nav>
 
       {/* Footer */}
-      <div className="p-4 border-t mt-auto flex items-center gap-2 cursor-pointer hover:bg-muted">
+      {/* <div className="p-4 border-t mt-auto flex items-center gap-2 cursor-pointer hover:bg-muted">
         <LogOut size={18} />
         {!collapsed && <span>Logout</span>}
-      </div>
+      </div> */}
     </aside>
   );
 }
