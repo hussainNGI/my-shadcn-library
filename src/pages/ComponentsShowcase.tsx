@@ -4,15 +4,50 @@ import { Input } from "@/components/ui/input"
 import Label from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow,  } from "@/components/ui/table"
 import { Home, Settings } from "lucide-react"
 import { DatePicker } from "@/components/ui/date-picker"
+import { useReactTable, getCoreRowModel, flexRender, ColumnDef } from "@tanstack/react-table"
+import DataTableDemo from "@/components/data-table/data-table-demo";
 
+type User = {
+  name: string
+  email: string
+  status: string
+}
+
+const data: User[] = [
+  { name: "Jane Doe", email: "jane@example.com", status: "Active" },
+  { name: "John Smith", email: "john@example.com", status: "Inactive" },
+]
+
+const columns: ColumnDef<User>[] = [
+  {
+    accessorKey: "name",
+    header: "Name",
+  },
+  {
+    accessorKey: "email",
+    header: "Email",
+  },
+  {
+    accessorKey: "status",
+    header: "Status",
+  },
+]
 export default function ComponentsShowcase() {
+    const table = useReactTable({
+    data,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+  })
   return (
     <div className="p-6 space-y-8">
       <h1 className="text-2xl font-semibold mb-4">Components Showcase</h1>
-
+      <section>
+        <h2 className="text-lg font-medium mb-2">Data Table</h2>
+        <DataTableDemo />
+      </section>
       {/* Buttons */}
       <section className="flex gap-6">
         <div className="flex flex-col">
@@ -51,8 +86,7 @@ export default function ComponentsShowcase() {
       <section>
         <h2 className="text-lg font-medium mb-2">Calendar</h2>
         <div className="space-y-2">
-          <Label htmlFor="email">Date of Birth</Label>
-          <DatePicker label="Start Date" disabled={(date) => date > new Date() || date < new Date("1900-01-01")} />
+          <DatePicker label="Date of Birth" disabled={(date) => date > new Date() || date < new Date("1900-01-01")} />
         </div>
       </section>
 
