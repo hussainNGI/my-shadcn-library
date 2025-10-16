@@ -10,3 +10,15 @@ export type QueryKeys = {
   filters?: string;
   joinOperator?: string;
 };
+
+
+export type Task = {
+  id: string;
+  title: string;
+  department: string;
+  status: string;
+  priority: string;
+  assignee: string;
+  category: string;
+  dueDate: string;
+};

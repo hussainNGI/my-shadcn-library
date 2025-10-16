@@ -34,7 +34,16 @@ export default function DataTableDemo(): React.JSX.Element {
   // correct typed states for TanStack
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
-  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
+  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({
+    id: true,
+    title: true,
+    department: false,
+    category: false,
+    status: true,
+    priority: true,
+    assignee: true,
+    dueDate: true,
+  });
   const [rowSelection, setRowSelection] = React.useState<RowSelectionState>({});
 
   const table = useReactTable({
