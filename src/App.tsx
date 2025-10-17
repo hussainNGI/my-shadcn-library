@@ -9,7 +9,7 @@ export default function App() {
     <ThemeProvider>
       <div className="min-h-screen bg-background text-foreground transition-theme duration-300">
         <header className="flex items-center justify-between p-6">
-          <h1 className="text-2xl font-bold">Shadcn Theme Demo</h1>
+          <h1 className="text-2xl font-bold">Arro</h1>
           <ThemeSelector />
         </header>
 
