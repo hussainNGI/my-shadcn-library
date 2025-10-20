@@ -46,6 +46,9 @@ export function DatePicker({ label = "Date of birth", disabled }: DatePickerProp
               setOpen(false)
             }}
             disabled={disabled}
+            captionLayout="dropdown"
+            fromYear={1900}
+            toYear={new Date().getFullYear() + 10}
           />
         </PopoverContent>
       </Popover>
