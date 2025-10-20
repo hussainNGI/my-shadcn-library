@@ -42,7 +42,7 @@ export default function ComponentsShowcase() {
     getCoreRowModel: getCoreRowModel(),
   })
   return (
-    <div className="p-6 space-y-8">
+    <div className="p-6 space-y-8 ">
       <h1 className="text-2xl font-semibold mb-4">Components Showcase</h1>
       <section>
         <h2 className="text-lg font-medium mb-2">Data Table</h2>

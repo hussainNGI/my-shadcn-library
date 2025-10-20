@@ -27,6 +27,7 @@ export function DataTable<TData>({ table }: DataTableProps<TData>) {
   }, []);
 
   return (
+    <div>
     <div
       ref={scrollRef}
       className="relative overflow-x-auto overflow-y-hidden rounded-md border bg-transparent"
@@ -39,7 +40,7 @@ export function DataTable<TData>({ table }: DataTableProps<TData>) {
                 <TableHead
                   key={header.id}
                   className={cn(
-                    "whitespace-nowrap",
+                    "whitespace-nowrap bg-background",
                     index === 0 &&
                       `sticky left-0 z-20 bg-background w-[220px] min-w-[220px] max-w-[220px] border-r ${
                         isScrolled ? "shadow-[4px_0_6px_-2px_rgba(0,0,0,0.1)]" : ""
@@ -65,7 +66,7 @@ export function DataTable<TData>({ table }: DataTableProps<TData>) {
                     className={cn(
                       "whitespace-nowrap",
                       index === 0 &&
-                        `sticky left-0 z-10 bg-background w-[220px] min-w-[220px] max-w-[220px] border-r ${
+                        `sticky left-0 z-10 bg-[hsl(var(--content-bg))] w-[220px] min-w-[220px] max-w-[220px] border-r ${
                           isScrolled ? "shadow-[4px_0_6px_-2px_rgba(0,0,0,0.1)]" : ""
                         }`
                     )}
@@ -87,7 +88,9 @@ export function DataTable<TData>({ table }: DataTableProps<TData>) {
           )}
         </TableBody>
       </Table>
-      <DataTablePagination table={table} />
+      
+    </div>
+    <DataTablePagination table={table} />
     </div>
   );
 }
